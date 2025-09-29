@@ -32,12 +32,6 @@ const regionColorMap: { [key: string]: { text: string } } = {
   'Region 4': { text: 'text-blue-400' },
   'Region 5': { text: 'text-purple-400' },
   'Region 6': { text: 'text-yellow-400' },
-  'Region 7': { text: 'text-pink-400' },
-  'Region 8': { text: 'text-indigo-400' },
-  'Region 9': { text: 'text-teal-400' },
-  'Region 10': { text: 'text-lime-400' },
-  'Region 11': { text: 'text-rose-400' },
-  'Region 12': { text: 'text-sky-400' },
 };
 const defaultColor = { text: 'text-slate-400' };
 
@@ -71,7 +65,7 @@ const Node: React.FC<{ node: TiDBNode }> = ({ node }) => {
         </div>
       </div>
       {node.type === NodeType.TIKV && node.dataRegions && (
-        <div className="mt-4 flex flex-row flex-wrap gap-1.5 p-3 bg-slate-950/50 rounded-md min-h-[6rem]">
+        <div className="mt-4 flex flex-row flex-wrap gap-2 p-3 bg-slate-950/50 rounded-md min-h-[6rem]">
           {node.dataRegions.length > 0 ? (
             node.dataRegions.map(region => {
               const colors = regionColorMap[region.name] || defaultColor;
@@ -81,7 +75,7 @@ const Node: React.FC<{ node: TiDBNode }> = ({ node }) => {
                   className={`relative transition-all duration-300 ${colors.text}`}
                   title={`${region.name}${region.leader ? ' (Leader)' : ''}`}
                 >
-                  <DataRegionIcon className="w-4 h-4" />
+                  <DataRegionIcon className="w-6 h-6" />
                    {region.leader && (
                     <div className="absolute -top-0.5 -right-0.5 w-2 h-2 bg-yellow-300 rounded-full border-2 border-slate-800" title={`${region.name} Leader`}></div>
                   )}

@@ -7,6 +7,6 @@ export const TidbIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
     fill="currentColor"
     {...props}
   >
-    <path d="M5 2C3.9 2 3 2.9 3 4v16c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2H5z" />
+    <rect x="3" y="3" width="18" height="18" rx="2" />
   </svg>
 );
