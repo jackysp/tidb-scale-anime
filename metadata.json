@@ -1,0 +1,5 @@
+{
+  "name": "TiDB Scale Animation",
+  "description": "An interactive animation that visually demonstrates the scale-out and scale-in capabilities of a TiDB cluster. Users can trigger scaling events to see how data is automatically rebalanced across storage nodes.",
+  "requestFramePermissions": []
+}
